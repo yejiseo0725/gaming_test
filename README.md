@@ -2,7 +2,6 @@
 
 MTS 이벤트 페이지의 게임형 인터랙션을 HTML, CSS, JavaScript로 구현한 과제입니다.
 
-- 데모: https://github.com/yejiseo0725/gaming_test
 - 이미지 에셋 없이 기본 도형으로 동작 위주로 구현했습니다.
 
 ## 게임 방법
