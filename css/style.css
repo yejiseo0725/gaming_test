@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #f2f2f2;
+}
+.app {
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #fff;
+  padding: 20px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border: 0;
+  border-radius: 12px;
+  background: #ff6a13;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  touch-action: manipulation;
+}
+.btn:disabled {
+  opacity: 0.5;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.mission {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.chances {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 16px;
+}
+.chances li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ddd;
+}
+.chances li.is-success {
+  background: #2f8fe0;
+}
+.chances li.is-fail {
+  background: #e8423f;
+}
+
+.stage {
+  position: relative;
+  height: 420px;
+  background: #fff3e0;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.zone {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 42%;
+  height: 16%;
+  border-top: 2px dashed #ff6a13;
+  border-bottom: 2px dashed #ff6a13;
+  background: rgba(255, 255, 255, 0.6);
+}
+.fly {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e8532f;
+  transform: translate(-50%, 0);
+}
+.net {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -40px;
+  width: 80px;
+  height: 200px;
+  background: #2f8fe0;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  transform-origin: 50% 100%;
+  transform: translateX(110px) rotate(25deg);
+  transition: transform 0.2s ease-in;
+}
+.net.is-swing {
+  transform: translateX(0) rotate(0);
+}
+
+.judge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+}
+.judge.is-hit {
+  color: #2f8fe0;
+}
+.judge.is-miss {
+  color: #e8423f;
+}
+
+.result {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tutorial {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}

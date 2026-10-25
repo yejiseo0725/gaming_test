@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>잠자리 잡고 상금 받기</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- 인트로 -->
+        <section class="intro" id="intro">
+            <h1>잠자리 잡고 상금받기</h1>
+            <p>현재 31,393명이 이벤트 참여중이에요</p>
+            <button type="button" class="btn" id="startBtn">게임 시작하기</button>
+        </section>
+
+        <!-- 게임 -->
+        <section class="game" id="game" hidden>
+            <div class="mission">
+                <p><strong id="targetText">3마리</strong> 잡으면 성공!</p>
+                <p>남은 시간 <span id="timer">15</span>초</p>
+            </div>
+            <ol class="chances" id="chances">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+
+            <div class="stage" id="stage">
+                <div class="zone" id="zone"></div>
+                <div class="fly" id="fly"></div>
+                <div class="net" id="net"></div>
+                <p class="judge" id="judge" aria-live="polite"></p>
+            </div>
+
+            <button type="button" class="btn" id="catchBtn" disabled>캐치!</button>
+
+            <button type="button" class="tutorial" id="tutorial">
+                화면을 터치하면 게임이 시작돼요!
+            </button>
+
+            <div class="result" id="result" hidden>
+                <p id="resultText"></p>
+                <button type="button" class="btn" id="retryBtn">다시 하기</button>
+            </div>
+        </section>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+
+</html>
